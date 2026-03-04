@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string change(string text, string oldText, string newText)
+{
+    int place;
+
+    place = text.find(oldText);   //متغير يمثل موقع الحرف او الكلمه الجديده
+
+    if (place != -1)   // نحط بالشرط سالب واحد لان مستحيل يطلع موقع الكلمه سالب
+    {
+        text.replace(place, oldText.length(), newText);  //نستبدل الكلمه القديمه بالجديده بادخال الجزاء الاول  الموقع الذي يبداء منه الاستيدال والثاني طول الجمله القديمه والثالث  الجمله الجديده
+    }
+
+    return text;   // نرجع النص بعد التغيير
+}
+
+int main()    //تطبيق عملي 
+{
+    string s;
+
+    cout << "enter the text "<<endl;
+    getline(cin, s);
+
+    s = change(s, "security", "cyber");
+
+    cout << "new text " << s;
+
+    return 0;
+}
