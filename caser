@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+#include <cctype>
+using namespace std;
+string caser(int key, string text)
+{
+for (int i = 0; i < text.size(); i++)
+	{
+		if (isalpha(text[i]))
+		{
+			text[i] = toupper(text[i]);
+			text[i] = text[i] + key;
+			if (text[i] > 'Z')
+			{
+				text[i] -= 26;
+			}
+
+		}
+	}
+return text;
+}
+int main()
+{
+	int key;
+	string text;
+cout << "Enter text:" << endl;;
+	getline(cin, text);
+cout << "Enter key:" << endl;
+	cin >> key;
+cout << "Encrypted text: " <<caser(key, text); ;
+return 0;
+}
