@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void reverse_array(int array1[6], int array2[6])
+void mix_array(int array1[6], int array2[6])
 {
 
     int new_array[12];
@@ -36,5 +36,6 @@ void reverse_array(int array1[6], int array2[6])
     cout << "]";
     cout<<endl <<endl; 
 }
+
 
 
