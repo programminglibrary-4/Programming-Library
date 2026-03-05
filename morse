@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+string morse(string text,string&encrypt)
+{
+	char char_array[36] = { '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
+	string morse_array[36] = { "-----",".----","..---","...--","....-",".....","-....","--...","---..","----.",".-","-...","-.-.","-..",".","..-.","--.","....","..",".---",
+		"-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.." };
+	for (int i = 0; i < text.size(); i++)
+	{
+		if (text[i] == ' ')
+		{
+			encrypt += " \\";
+			continue;
+		}
+		for (int j = 0; j < 36; j++)
+		{
+			text[i] = toupper(text[i]);
+			if (text[i] == char_array[j])
+			{
+				encrypt+=morse_array[j];
+			}
+        }
+	}
+	return encrypt;
+}
+int main()
+{
+	cout << "Enter Text: " << endl;
+	string text;
+	getline(cin >> ws, text);
+	string encrypt;
+	 cout<< morse(text, encrypt);
+return 0;
+}
