@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void delet_one(int x[10] , int size , int y){
+void delet_one(int x[268435455] , int size , int y){
 
 y = y-1;
 
@@ -26,4 +26,5 @@ x[y]=x[y+1];
 
 //* ضع قيمة Y 
 //* حسب نظام الحساب البشري لذي يبدأ من 1 
+
 
