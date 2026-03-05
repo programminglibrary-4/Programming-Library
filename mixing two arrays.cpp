@@ -37,7 +37,9 @@ void mix_array(int array1[6], int array2[6])
     cout<<endl <<endl; 
 }
 
+--- ملاحضة ---
 //^ دالة تدمج مصفوفتين معا
+
 
 
 
