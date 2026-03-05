@@ -37,3 +37,4 @@ void reverse_array(int array1[6], int array2[6])
     cout<<endl <<endl; 
 }
 
+
